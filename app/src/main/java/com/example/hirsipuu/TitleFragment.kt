@@ -37,8 +37,14 @@ class TitleFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding = inflater.inflate(R.layout.fragment_title, container, false)
-        val button : Button = binding.findViewById(R.id.startBut)
-        button.setOnClickListener{view : View->view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)}
+        val startGameBut : Button = binding.findViewById(R.id.startBut)
+        val addWordBut : Button = binding.findViewById(R.id.addBut)
+        val rulBut : Button = binding.findViewById(R.id.rulesBut)
+        val listBut : Button = binding.findViewById(R.id.listBut)
+        rulBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)}
+        listBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_wordListFragment)}
+        addWordBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_addWordFragment)}
+        startGameBut.setOnClickListener{view : View->view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)}
         return binding
     }
 

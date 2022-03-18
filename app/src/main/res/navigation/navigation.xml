@@ -13,6 +13,15 @@
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -50,13 +59,25 @@
     <fragment
         android:id="@+id/addWordFragment"
         android:name="com.example.hirsipuu.AddWordFragment"
-        android:label="AddWordFragment" />
+        android:label="AddWordFragment" >
+        <action
+            android:id="@+id/action_addWordFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/rulesFragment"
         android:name="com.example.hirsipuu.RulesFragment"
-        android:label="RulesFragment" />
+        android:label="RulesFragment" >
+        <action
+            android:id="@+id/action_rulesFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/wordListFragment"
         android:name="com.example.hirsipuu.WordListFragment"
-        android:label="WordListFragment" />
+        android:label="WordListFragment" >
+        <action
+            android:id="@+id/action_wordListFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
 </navigation>
