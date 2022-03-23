@@ -15,11 +15,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/guessBut"
+        android:background="@drawable/button_quess_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guess"
+        android:text="@string/guess"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -3,6 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/add_icon.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/add_word_list_icon.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_add_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_add_word_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_grafik.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_home_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_quess_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_replay_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_rules_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_start_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/button_word_list_style.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/quess_icon.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/replay_icon.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/return_icon.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/rules_icon.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/start_game_icon.xml" value="0.403125" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/drawable/word_list_icon.xml" value="0.403125" />
         <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/layout/add_word_fragment.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/layout/fragment_title.xml" value="0.2957427536231884" />
@@ -11,6 +29,7 @@
         <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/layout/rules_fragment.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/layout/victory_fragment.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/layout/word_list_fragment.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/ramii/OneDrive/Documents/koulu tiedostot/kevat 2022/Mobiilikehitysprojekti/Ekarepo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.403125" />
       </map>
     </option>
   </component>

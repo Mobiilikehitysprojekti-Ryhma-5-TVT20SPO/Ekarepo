@@ -14,7 +14,7 @@ class GameFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding=inflater.inflate(R.layout.game_fragment, container, false)
-        
+        lose()
         return binding
     }
     fun victory(){
