@@ -8,6 +8,7 @@
         />
     <item
         android:drawable="@drawable/quess_icon"
+        android:left="10dp"
         android:height="30dp"
         android:width="30dp"
         android:gravity="left|center"

@@ -19,7 +19,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backStartBut"
         android:background="@drawable/button_home_style"
-        android:paddingLeft="15dp"
+        android:paddingLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

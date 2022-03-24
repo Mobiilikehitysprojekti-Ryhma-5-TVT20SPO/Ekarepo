@@ -8,6 +8,7 @@
         />
     <item
         android:drawable="@drawable/add_word_list_icon"
+        android:left="10dp"
         android:gravity="left|center"
         android:width="40dp"
         android:height="35dp"

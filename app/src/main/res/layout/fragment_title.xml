@@ -38,7 +38,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/addBut"
             android:background="@drawable/button_add_word_style"
-            android:paddingStart="20dp"
+            android:paddingStart="35dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
