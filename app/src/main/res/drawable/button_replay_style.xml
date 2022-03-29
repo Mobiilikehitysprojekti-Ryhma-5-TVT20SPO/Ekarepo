@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/button_grafik"
+        android:gravity="center"
+        android:width="200dp"
+        android:height="40dp"
+        />
+    <item
+        android:drawable="@drawable/replay_icon"
+        android:left="5dp"
+        android:gravity="left|center"
+        android:width="35dp"
+        android:height="35dp"
+        />
+</layer-list>

@@ -5,18 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/playAgBut"
+        android:background="@drawable/button_replay_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play again"
+        android:text="@string/play_again"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numTryesText" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backStartBut"
+        android:background="@drawable/button_home_style"
+        android:paddingLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
