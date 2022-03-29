@@ -21,7 +21,7 @@ class GameFragment : Fragment() {
         val btn = binding.findViewById<Button>(R.id.guessBut)
         var vaihda:Int = 1
         val imageView = binding.findViewById<ImageView>(R.id.imageView2)
-        imageView.setImageResource(R.drawable.hirsipuu1)
+        imageView.setImageResource(R.drawable.hirsipuu11)
 
         btn.setOnClickListener( View.OnClickListener {
             vaihda=vaihdakuva(vaihda,binding);
@@ -40,13 +40,13 @@ class GameFragment : Fragment() {
         val imageView = binding.findViewById<ImageView>(R.id.imageView2)
         val numero = vaihda+1
         val kuva= when (numero) {
-            2-> R.drawable.hirsipuu2
-            3-> R.drawable.hirsipuu3
-            4-> R.drawable.hirsipuu4
-            5-> R.drawable.hirsipuu5
-            6-> R.drawable.hirsipuu6
-            7-> R.drawable.hirsipuu7
-            else-> R.drawable.hirsipuu8
+            2-> R.drawable.hirsipuu22
+            3-> R.drawable.hirsipuu33
+            4-> R.drawable.hirsipuu44
+            5-> R.drawable.hirsipuu55
+            6-> R.drawable.hirsipuu66
+            7-> R.drawable.hirsipuu77
+            else-> R.drawable.hirsipuu88
         }
 
 
