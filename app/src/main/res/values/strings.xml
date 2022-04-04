@@ -9,4 +9,6 @@
     <string name="guess">Guess</string>
     <string name="start_new_game">Start New Game</string>
     <string name="play_again">Play again</string>
+    <string name="write_word_you_want_to_add">Write word you want to add</string>
+    <string name="add_word_text">Here you can add words to guess in the game. \nWord can\'t contain special letters or any numbers. \nAdded words can only be english words.</string>
 </resources>
