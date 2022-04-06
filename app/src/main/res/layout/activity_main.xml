@@ -3,20 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="clip_vertical|clip_horizontal"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/puutausta"
     tools:context=".MainActivity">
 
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
     <fragment
         android:id="@+id/myNavHostFragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -25,6 +15,4 @@
         app:navGraph="@navigation/navigation"
         app:defaultNavHost="true"
         />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
