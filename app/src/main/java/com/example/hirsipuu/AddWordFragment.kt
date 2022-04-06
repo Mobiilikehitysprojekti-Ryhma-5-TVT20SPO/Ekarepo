@@ -23,10 +23,10 @@ class AddWordFragment : Fragment() {
         addWordBut.setOnClickListener{
             val text = addText.text.toString().lowercase()                                      //Get string from textinput
             if (text.isNotEmpty()){                                                             //Check that text is not empty
-                if(text.contains("[0-9!\"#$%&'()*+,-./:;\\\\<=>?@\\[\\]^_`{|}~]".toRegex())) {  //Check if word contains special characters or numbers
+                if(text.contains("[0-9!\"#$%&'()*+,-./:;\\\\<=>?@\\[\\]^_`{|}~∅·€°¶£¥¢√±∞§½←→↔↑↓©®™¡¿]".toRegex())) {  //Check if word contains special characters or numbers
                     Toast.makeText(context, "Word contains numbers or special characters", Toast.LENGTH_SHORT).show()   //Tell user why can't add word
                 }else{
-                    if (text.contains("ä") or text.contains("ö")) {                 //Check if word contains non english alphabets
+                    if (text.contains("[äÄöÖëËÿüÜïÏåÅêÊâÂîÎôÔûÛéÉáÁúÚóÓýÝíÍàÀèÈùÙìÌòÒãÃõÕÆæŒœ]".toRegex())) {                 //Check if word contains non english alphabets
                         Toast.makeText(context, "Word contains non english letters", Toast.LENGTH_SHORT).show() //Tell user why can't add word
                     } else {
                         Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
