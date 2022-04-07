@@ -29,7 +29,7 @@ class AddWordFragment : Fragment() {
                     if (text.contains("[äÄöÖëËÿüÜïÏåÅêÊâÂîÎôÔûÛéÉáÁúÚóÓýÝíÍàÀèÈùÙìÌòÒãÃõÕÆæŒœ]".toRegex())) {                 //Check if word contains non english alphabets
                         Toast.makeText(context, "Word contains non english letters", Toast.LENGTH_SHORT).show() //Tell user why can't add word
                     } else {
-                        Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "$text added to database", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
