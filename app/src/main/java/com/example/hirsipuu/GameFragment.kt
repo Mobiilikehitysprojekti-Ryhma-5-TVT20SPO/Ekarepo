@@ -34,17 +34,19 @@ class GameFragment : Fragment() {
         val guessWordText: TextView = binding.findViewById(R.id.guessWordText)
         val guessInputText: TextView = binding.findViewById(R.id.guessInputText)
         val usedLettersText: TextView = binding.findViewById(R.id.LettersUsedText)
+        //val randomIndex = Random..Sqlite listasta joku haetaan randomindexillä
         bind=binding
         val btn = binding.findViewById<Button>(R.id.guessBut)
         val imageView = binding.findViewById<ImageView>(R.id.imageView2)
         imageView.setImageResource(R.drawable.hirsipuu11)
 
 
-        word = "niko"        //Tähän SQlitellä tehdyistä sanoista randomilla joku
+        word = "niko"        //Tähän SQlitellä tehdyistä sanoista randomindexillä joku
         generateUnderscores(word) // luodaan kyseiselle sanalle alaviivat alempana olevassa generateUnderscores toteutuksessa
         guessWordText.text = underscoreWord
 
         btn.setOnClickListener {
+
             var guessWord = guessInputText.text.toString()
             if (guessWord.length > 1) {
                 // tarkistus että ei voi arvata kun yhden kirjaimen kerrallaan, muuten ei tapahdu mitään
@@ -68,9 +70,9 @@ class GameFragment : Fragment() {
 
                 }
 
-                else{
+              //  else{
 
-                }
+               // }
 
             }
         }
@@ -95,7 +97,7 @@ class GameFragment : Fragment() {
     fun play (letter: Char) {
 
 
-        lettersUsed += letter
+        lettersUsed += letter                      //Kun kirjaimia käytetään ne passataan lettersUsed muuttujaan joka liitetään usedLettersTextviewiin
         val indexes = mutableListOf<Int>()
 
         word.forEachIndexed { index, char ->
