@@ -129,6 +129,9 @@ class GameFragment : Fragment() {
         findNavController().navigate(R.id.action_gameFragment_to_loseFragment)      // navigoi häviö fragmenttiin kutsuessa
 
     }
+    fun getword():String{
+        return word
+    }
 
     private fun vaihdakuva(vaihda:Int,binding:View):Int {
         val imageView = binding.findViewById<ImageView>(R.id.imageView2)
