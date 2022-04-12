@@ -10,7 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 
 class GameFragment : Fragment() {
-    override fun onCreateView(
+    var sana:String="jotain"
+        override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,6 +26,8 @@ class GameFragment : Fragment() {
 
         btn.setOnClickListener( View.OnClickListener {
             vaihda=vaihdakuva(vaihda,binding);
+
+
         })
 
 
@@ -52,5 +55,8 @@ class GameFragment : Fragment() {
 
         imageView.setImageResource(kuva)
         return numero
+    }
+      fun getword(): String {
+        return sana
     }
 }
