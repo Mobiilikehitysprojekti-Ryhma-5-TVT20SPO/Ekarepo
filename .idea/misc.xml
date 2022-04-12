@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndKoodit/Ekarepo/app/src/main/res/drawable/button_grafik.xml" value="0.3828125" />
+        <entry key="..\:/AndKoodit/Ekarepo/app/src/main/res/drawable/button_replay_style.xml" value="0.22135416666666666" />
         <entry key="..\:/AndKoodit/Ekarepo/app/src/main/res/layout/game_fragment.xml" value="0.28940217391304346" />
+        <entry key="..\:/AndKoodit/Ekarepo/app/src/main/res/layout/lose_fragment.xml" value="0.2694746376811594" />
+        <entry key="..\:/AndKoodit/Ekarepo/app/src/main/res/layout/rules_fragment.xml" value="0.26268115942028986" />
+        <entry key="..\:/AndKoodit/Ekarepo/app/src/main/res/layout/victory_fragment.xml" value="0.2694746376811594" />
+        <entry key="..\:/AndKoodit/Ekarepo/app/src/main/res/layout/word_list_fragment.xml" value="0.2694746376811594" />
         <entry key="..\:/Hirsipuu/Ekarepo/app/src/main/res/layout/add_word_fragment.xml" value="0.36666666666666664" />
         <entry key="..\:/Hirsipuu/Ekarepo/app/src/main/res/layout/fragment_title.xml" value="0.36666666666666664" />
         <entry key="..\:/Hirsipuu/Ekarepo/app/src/main/res/layout/game_fragment.xml" value="0.36666666666666664" />
