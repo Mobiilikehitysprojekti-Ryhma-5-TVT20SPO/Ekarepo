@@ -17,20 +17,30 @@ class Database internal constructor(context: Context?):
         onCreate(db)
     }
 
-    fun load():String{
-        var result=""
+    fun loadWords():ArrayList<String>{
+        var resword = arrayListOf<String>()
         val query="Select*FROM $TABLE_WORDS"
         val db = this.writableDatabase
         val cursor = db.rawQuery(query,null)
         while (cursor.moveToNext()){
-            val result_0= cursor.getString(0)
-            val result_1= cursor.getInt(1)
-            result+= result_0+" "+result_1.toString()+System.getProperty("line.separator")
+            resword.add(cursor.getString(0))
         }
         cursor.close()
         db.close()
-        if(result=="") result="empty"
-        return result
+        return resword
+    }
+
+    fun loadNum():ArrayList<Int>{
+        var resnum = arrayListOf<Int>()
+        val query="Select*FROM $TABLE_WORDS"
+        val db = this.writableDatabase
+        val cursor = db.rawQuery(query,null)
+        while (cursor.moveToNext()){
+            resnum.add(cursor.getInt(1))
+        }
+        cursor.close()
+        db.close()
+        return resnum
     }
 
     fun add(word: String):Long{
@@ -42,6 +52,13 @@ class Database internal constructor(context: Context?):
         confirm = db.insert(TABLE_WORDS, null, values)
         db.close()
         return confirm
+    }
+
+    fun updateTry(word:String,num:Int){
+        val db=this.writableDatabase
+        val args = ContentValues()
+        args.put(COLUMN_NUM, num)
+        db.update(TABLE_WORDS, args, "$COLUMN_ID='$word'",null)>0
     }
 
     companion object{
