@@ -10,11 +10,21 @@ class Database internal constructor(context: Context?):
     override fun onCreate(db: SQLiteDatabase) {
         val CREATE_WORD_TABLE=("CREATE TABLE "+ TABLE_WORDS + "(" + COLUMN_ID + " TEXT PRIMARY KEY,"+ COLUMN_NUM + " INTEGER " + ")")
         db.execSQL(CREATE_WORD_TABLE)
+        addWords("school",db)
+        addWords("summer",db)
+        addWords("sports",db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE_WORDS")
         onCreate(db)
+    }
+
+    private fun addWords(word:String,db:SQLiteDatabase){
+        val values = ContentValues()
+        values.put(COLUMN_ID, word)
+        values.put(COLUMN_NUM, 0)
+        db.insert(TABLE_WORDS, null, values)
     }
 
     fun loadWords():ArrayList<String>{
