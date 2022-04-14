@@ -16,8 +16,9 @@ class WordListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val wordarray = arrayOf<String>()      //Haetaan kaikki sanat
-        val numarray = arrayOf<Int>()                         //Haetaan sanoille yritysten määrä
+        val db=Database(context)
+        val wordarray = db.loadWords()      //Haetaan kaikki sanat
+        val numarray = db.loadNum()                         //Haetaan sanoille yritysten määrä
         var text = ""
         var textnum = ""
         val binding = inflater.inflate(R.layout.word_list_fragment, container, false)      //Otetaan View bindiin kiinni
