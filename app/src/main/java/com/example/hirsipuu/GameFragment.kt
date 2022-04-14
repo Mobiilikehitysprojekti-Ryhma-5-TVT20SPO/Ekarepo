@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import android.widget.TextView
 import android.widget.Toast
+import kotlin.random.Random
 
 
 class GameFragment : Fragment() {
@@ -34,14 +35,12 @@ class GameFragment : Fragment() {
         val guessWordText: TextView = binding.findViewById(R.id.guessWordText)
         val guessInputText: TextView = binding.findViewById(R.id.guessInputText)
         val usedLettersText: TextView = binding.findViewById(R.id.LettersUsedText)
-        //val randomIndex = Random..Sqlite listasta joku haetaan randomindexillä
         bind=binding
         val btn = binding.findViewById<Button>(R.id.guessBut)
         val imageView = binding.findViewById<ImageView>(R.id.imageView2)
         imageView.setImageResource(R.drawable.hirsipuu11)
 
-
-        word = "niko"        //Tähän SQlitellä tehdyistä sanoista randomindexillä joku
+        word = getRandom()      //Tähän SQlitellä tehdyistä sanoista randomindexillä joku
         generateUnderscores(word) // luodaan kyseiselle sanalle alaviivat alempana olevassa generateUnderscores toteutuksessa
         guessWordText.text = underscoreWord
 
@@ -50,12 +49,13 @@ class GameFragment : Fragment() {
             var guessWord = guessInputText.text.toString()
             if (guessWord.length > 1) {
                 // tarkistus että ei voi arvata kun yhden kirjaimen kerrallaan, muuten ei tapahdu mitään
+                Toast.makeText(context,"You can only guess one letter at a time!",Toast.LENGTH_SHORT).show()
             } else {
                 if(guessWord.isNotEmpty()){
                     if(lettersUsed.contains(guessWord)){
 
-                    //tässä tarkistuksia että kirjaimen arvauskenttä ei ole tyhjä, eikä samaa kirjainta voi arvata uudelleen
-
+                    //tässä tarkistus että samaa kirjainta voi arvata uudelleen
+                        Toast.makeText(context,"You have already guessed this letter, try a different one!",Toast.LENGTH_SHORT).show()
 
                     }else{
 
@@ -70,9 +70,9 @@ class GameFragment : Fragment() {
 
                 }
 
-              //  else{
-
-               // }
+                else{
+                        Toast.makeText(context,"Your guess cannot be empty!",Toast.LENGTH_SHORT).show() // Eli arvaus ei voi olla tyhjä.
+                }
 
             }
         }
@@ -80,6 +80,11 @@ class GameFragment : Fragment() {
 
     }
 
+    fun getRandom() : String {
+        val db=Database(context)
+        val randomIndex = Random.nextInt(db.loadWords().size)
+        return db.loadWords()[randomIndex]
+    }
 
 
     fun generateUnderscores(word: String) {     //tässä luodaan arvattavalle sanalle alaviivat ettei arvattavaa sanaa näe

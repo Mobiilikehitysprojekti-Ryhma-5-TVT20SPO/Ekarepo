@@ -50,7 +50,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Guess The Letter"
+        android:text="Guess"
         android:textColor="#FF5722"
         android:textSize="20sp"
         android:textStyle="bold"
