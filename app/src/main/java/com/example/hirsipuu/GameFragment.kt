@@ -22,6 +22,7 @@ class GameFragment : Fragment() {
     var vaihda:Int = 1
     lateinit var bind:View
     private val maxTries = 8
+    private var currentTries = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -116,8 +117,9 @@ class GameFragment : Fragment() {
             val sb = StringBuilder(finalUnderscoreWord).also { it.setCharAt(index, letter) }
             finalUnderscoreWord = sb.toString()
         }
-        if (indexes.isEmpty()) {                    //Jos kirjainta ei löydy sanasta, kutsutaan vaihdakuva joka lisää hirsipuulle elementtejä
+        if (indexes.isEmpty()) { //Jos kirjainta ei löydy sanasta, kutsutaan vaihdakuva joka lisää hirsipuulle elementtejä
             vaihda = vaihdakuva(vaihda,bind)
+            currentTries++
         }
         underscoreWord = finalUnderscoreWord
 
@@ -127,10 +129,11 @@ class GameFragment : Fragment() {
 
     }
     fun victory(){
+        val db = Database(context)
+        db.updateTry(word,currentTries) // päivittää sanan yritysmäärää, kutsumalla updateTry() database välilehdestä.
         findNavController().navigate(R.id.action_gameFragment_to_victoryFragment)   // navigoi voitto fragmenttiin kutsuessa
     }
     fun lose(){
-
         findNavController().navigate(R.id.action_gameFragment_to_loseFragment)      // navigoi häviö fragmenttiin kutsuessa
 
     }
