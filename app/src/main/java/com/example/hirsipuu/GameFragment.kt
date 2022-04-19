@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
+import com.example.hirsipuu.TitleFragment.Companion.newInstance
+import javax.xml.validation.SchemaFactory.newInstance
 
 
 class GameFragment : Fragment() {
@@ -117,16 +120,17 @@ class GameFragment : Fragment() {
         underscoreWord = finalUnderscoreWord
 
         if(underscoreWord.equals(word,true)){   //Jos alaviivasana on paljastettu ja on sama kuin arvattava sana, navigoidaan voitto ruutuun kutsumalla victory()
-            victory()
+            victory(word)
         }
 
     }
-    fun victory(){
-        findNavController().navigate(R.id.action_gameFragment_to_victoryFragment)   // navigoi voitto fragmenttiin kutsuessa
+    fun victory(word: String){
+        val bundle= bundleOf("key" to word)
+        findNavController().navigate(R.id.action_gameFragment_to_victoryFragment,bundle)   // navigoi voitto fragmenttiin kutsuessa
     }
-    fun lose(){
-
-        findNavController().navigate(R.id.action_gameFragment_to_loseFragment)      // navigoi häviö fragmenttiin kutsuessa
+    fun lose(word: String){
+        val bundle = bundleOf("key" to word)
+        findNavController().navigate(R.id.action_gameFragment_to_loseFragment,bundle)      // navigoi häviö fragmenttiin kutsuessa
 
     }
     fun getword():String{
@@ -146,7 +150,7 @@ class GameFragment : Fragment() {
             else-> R.drawable.hirsipuu88
         }
         if(numero == maxTries){         //Kun arvauksia tulee liikaa ja tikku-ukko on kokonaan "piirretty" kutsutaan lose() joka navigoi pelin häviö ruutuun
-            lose()
+            lose(word)
         }
 
 

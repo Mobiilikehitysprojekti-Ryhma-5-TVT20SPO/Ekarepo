@@ -33,7 +33,7 @@
         android:layout_width="374dp"
         android:layout_height="86dp"
         android:layout_marginTop="32dp"
-        android:text="victoryText"
+        android:text="You won!"
         android:textColor="#FF5722"
         android:textSize="60sp"
         android:textStyle="bold"
@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/wordtext"
-        android:layout_width="227dp"
+        android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginTop="136dp"
         android:text="text"

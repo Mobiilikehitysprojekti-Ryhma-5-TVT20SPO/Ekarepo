@@ -22,7 +22,7 @@
             android:text="@string/start_game"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/listBut"
@@ -48,11 +48,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/startBut" />
 
-        <ImageView
-            android:id="@+id/imageView"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="352dp"
             android:layout_height="378dp"
             android:layout_marginTop="16dp"
+            android:text="Hirsipuu"
+            android:textColor="#FF5722"
+            android:textStyle="bold"
+            android:textSize="90sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
