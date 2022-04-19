@@ -16,6 +16,7 @@ class AddWordFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val db=Database(context)
         val binding = inflater.inflate(R.layout.add_word_fragment, container, false)    //Get fragment
         val addText : EditText = binding.findViewById(R.id.addWordText)     //Get textinput
         val addWordBut : Button = binding.findViewById(R.id.addWordBut)     //Get word add button
@@ -29,7 +30,12 @@ class AddWordFragment : Fragment() {
                     if (text.contains("[äÄöÖëËÿüÜïÏåÅêÊâÂîÎôÔûÛéÉáÁúÚóÓýÝíÍàÀèÈùÙìÌòÒãÃõÕÆæŒœ]".toRegex())) {                 //Check if word contains non english alphabets
                         Toast.makeText(context, "Word contains non english letters", Toast.LENGTH_SHORT).show() //Tell user why can't add word
                     } else {
-                        Toast.makeText(context, "$text added to database", Toast.LENGTH_SHORT).show()
+                        val confirm=db.add(text)
+                        if (confirm>-1){
+                            Toast.makeText(context, "Word added to the game", Toast.LENGTH_SHORT).show()
+                        }else{
+                            Toast.makeText(context, "Word already exists", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
             }
