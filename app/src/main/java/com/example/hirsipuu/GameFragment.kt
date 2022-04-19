@@ -133,21 +133,19 @@ class GameFragment : Fragment() {
     }
 
     
-    fun victory(){
+    fun victory(word:String){
         val db = Database(context)
         db.updateTry(word,currentTries) // päivittää sanan yritysmäärää, kutsumalla updateTry() database välilehdestä.
         val bundle= bundleOf("key" to word)
         findNavController().navigate(R.id.action_gameFragment_to_victoryFragment,bundle)   // navigoi voitto fragmenttiin kutsuessa
     }
-    fun lose(){
+    fun lose(word:String){
         val bundle = bundleOf("key" to word)
         findNavController().navigate(R.id.action_gameFragment_to_loseFragment,bundle)      // navigoi häviö fragmenttiin kutsuessa
 
 
     }
-    fun getword():String{
-        return word
-    }
+
 
     private fun vaihdakuva(vaihda:Int,binding:View):Int {
         val imageView = binding.findViewById<ImageView>(R.id.imageView2)
