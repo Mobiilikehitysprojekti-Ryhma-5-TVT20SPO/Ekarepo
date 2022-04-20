@@ -14,9 +14,9 @@ class RulesFragment : Fragment (){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = inflater.inflate(R.layout.rules_fragment, container, false)
-        val backToStart : Button = binding.findViewById(R.id.backRulerBut)
-        backToStart.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_rulesFragment_to_titleFragment)}
+        val binding = inflater.inflate(R.layout.rules_fragment, container, false)       //Haetaan view bindiin
+        val backToStart : Button = binding.findViewById(R.id.backRulerBut)                          //haetaan kaikki käytettävät widgetit
+        backToStart.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_rulesFragment_to_titleFragment)}    //Mennään alku fragmenttiin
         return binding
     }
 }

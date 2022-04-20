@@ -13,10 +13,10 @@ import androidx.navigation.findNavController
 
 
 class VictoryFragment : Fragment() {
-    private var word = ""
+    private var word = ""                       //Tehdään tyhjä String muuttuja johon asetetaan pelin sana
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        arguments?.getString("key")?.let { word=it }
+        arguments?.getString("key")?.let { word=it }        //Asetetaan pelin sana String muuttujaan
     }
 
 
@@ -25,14 +25,14 @@ class VictoryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding=inflater.inflate(R.layout.victory_fragment, container, false)
-        val playAgainBut : Button = binding.findViewById(R.id.playAgBut)
+        val binding=inflater.inflate(R.layout.victory_fragment, container, false)       //Haetaan view bindiin
+        val playAgainBut : Button = binding.findViewById(R.id.playAgBut)                            //haetaan kaikki käytettävät widgetit
         val backToStart : Button = binding.findViewById(R.id.backStartBut)
         val wordtext : TextView = binding.findViewById(R.id.wordtext)
-        val wt = "word was:$word"
-        wordtext.text = wt
-        playAgainBut.setOnClickListener{view : View->view.findNavController().navigate(R.id.action_victoryFragment_to_gameFragment)}
-        backToStart.setOnClickListener{view : View->view.findNavController().navigate(R.id.action_victoryFragment_to_titleFragment)}
+        val wt = "word was:$word"                                                                   //tehdään String jossa pelin sana mukana
+        wordtext.text = wt                                                                          //Laitetaan String textviewiin
+        playAgainBut.setOnClickListener{view : View->view.findNavController().navigate(R.id.action_victoryFragment_to_gameFragment)}    //Mennään peli fragmenttiin
+        backToStart.setOnClickListener{view : View->view.findNavController().navigate(R.id.action_victoryFragment_to_titleFragment)}    //Mennään alku fragmenttiin
         return binding
     }
 

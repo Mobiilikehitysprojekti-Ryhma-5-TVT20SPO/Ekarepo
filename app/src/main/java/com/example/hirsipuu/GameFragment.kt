@@ -135,11 +135,11 @@ class GameFragment : Fragment() {
     fun victory(word:String){
         val db = Database(context)
         db.updateTry(word,currentTries) // päivittää sanan yritysmäärää, kutsumalla updateTry() database välilehdestä.
-        val bundle= bundleOf("key" to word)
+        val bundle= bundleOf("key" to word)                                         //Tehdään voitto fragmentille bundle jossa pelin sana
         findNavController().navigate(R.id.action_gameFragment_to_victoryFragment,bundle)   // navigoi voitto fragmenttiin kutsuessa
     }
     fun lose(word:String){
-        val bundle = bundleOf("key" to word)
+        val bundle = bundleOf("key" to word)                                        //Tehdään voitto fragmentille bundle jossa pelin sana
         findNavController().navigate(R.id.action_gameFragment_to_loseFragment,bundle)      // navigoi häviö fragmenttiin kutsuessa
 
 
