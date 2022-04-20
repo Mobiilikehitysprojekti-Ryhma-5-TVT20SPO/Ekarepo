@@ -20,7 +20,6 @@ class GameFragment : Fragment() {
 
     private var lettersUsed: String = ""
     private var underscoreWord: String = ""
-    private lateinit var wordToGuess: String
     private var word: String = ""
     var vaihda:Int = 1
     lateinit var bind:View
@@ -84,7 +83,7 @@ class GameFragment : Fragment() {
 
     }
 
-    fun getRandom() : String {
+    fun getRandom() : String {      // Hakee satunnaisen sanan Tietokannan sanoista.
         val db=Database(context)
         val randomIndex = Random.nextInt(db.loadWords().size)
         return db.loadWords()[randomIndex]
