@@ -11,10 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 
 class LoseFragment : Fragment () {
-    private var word = ""
+    private var word = ""                           //Tehdään tyhjä String muuttuja johon asetetaan pelin sana
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        arguments?.getString("key")?.let { word=it }
+        arguments?.getString("key")?.let { word=it }    //Asetetaan pelin sana String muuttujaan
     }
 
     override fun onCreateView(
@@ -22,14 +22,14 @@ class LoseFragment : Fragment () {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = inflater.inflate(R.layout.lose_fragment, container, false)
-        val startAgainBut : Button = binding.findViewById(R.id.newGameBut)
+        val binding = inflater.inflate(R.layout.lose_fragment, container, false)    //Haetaan view bindiin
+        val startAgainBut : Button = binding.findViewById(R.id.newGameBut)                      //haetaan kaikki käytettävät widgetit
         val backToStart : Button = binding.findViewById(R.id.backToStartBut)
         val wordtext : TextView = binding.findViewById(R.id.textView2)
-        val wt = "word was:$word"
-        wordtext.text = wt
-        startAgainBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_loseFragment_to_gameFragment)}
-        backToStart.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_loseFragment_to_titleFragment)}
+        val wt = "word was:$word"                                                               //tehdään String jossa pelin sana mukana
+        wordtext.text = wt                                                                      //Laitetaan String textviewiin
+        startAgainBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_loseFragment_to_gameFragment)}    //Mennään peli fragmenttiin
+        backToStart.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_loseFragment_to_titleFragment)}     //Mennään alku fragmenttiin
         return binding
     }
 }

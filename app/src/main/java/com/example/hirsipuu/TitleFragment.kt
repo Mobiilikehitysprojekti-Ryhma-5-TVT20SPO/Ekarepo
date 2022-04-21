@@ -36,15 +36,15 @@ class TitleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = inflater.inflate(R.layout.fragment_title, container, false)
-        val startGameBut : Button = binding.findViewById(R.id.startBut)
+        val binding = inflater.inflate(R.layout.fragment_title, container, false)       //Otetaan view bindiin
+        val startGameBut : Button = binding.findViewById(R.id.startBut)                             //Haetaan tarvittavat widgetit
         val addWordBut : Button = binding.findViewById(R.id.addBut)
         val rulBut : Button = binding.findViewById(R.id.rulesBut)
         val listBut : Button = binding.findViewById(R.id.listBut)
-        rulBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)}
-        listBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_wordListFragment)}
-        addWordBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_addWordFragment)}
-        startGameBut.setOnClickListener{view : View->view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)}
+        rulBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)}         //Mennään sääntö fragmenttiin
+        listBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_wordListFragment)}     //Mennään sanalista fragmenttiin
+        addWordBut.setOnClickListener{view:View->view.findNavController().navigate(R.id.action_titleFragment_to_addWordFragment)}   //Mennään sananlisäys fragmenttiin
+        startGameBut.setOnClickListener{view : View->view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)}  //Mennään peli fragmenttiin
         return binding
     }
 

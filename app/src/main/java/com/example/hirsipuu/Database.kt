@@ -8,26 +8,26 @@ import android.database.sqlite.SQLiteOpenHelper
 class Database internal constructor(context: Context?):
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     override fun onCreate(db: SQLiteDatabase) {
-        val CREATE_WORD_TABLE=("CREATE TABLE "+ TABLE_WORDS + "(" + COLUMN_ID + " TEXT PRIMARY KEY,"+ COLUMN_NUM + " INTEGER " + ")")
-        db.execSQL(CREATE_WORD_TABLE)
-        addWords("school",db)
-        addWords("summer",db)
-        addWords("sports",db)
+        val CREATE_WORD_TABLE=("CREATE TABLE "+ TABLE_WORDS + "(" + COLUMN_ID + " TEXT PRIMARY KEY,"+ COLUMN_NUM + " INTEGER " + ")") //Luodaan table nimeltä words, jossa on columnit sanoille ja yritys kerralle
+        db.execSQL(CREATE_WORD_TABLE)   //Ajetaan tablen luonti
+        addWords("school",db)       //Lisätään sana jos sitä ei vielä ole
+        addWords("summer",db)       //Lisätään sana jos sitä ei vielä ole
+        addWords("sports",db)       //Lisätään sana jos sitä ei vielä ole
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        db.execSQL("DROP TABLE IF EXISTS $TABLE_WORDS")
+        db.execSQL("DROP TABLE IF EXISTS $TABLE_WORDS")     //Jos table words on luotu jo uudelleen luominen tiputetaan pois
         onCreate(db)
     }
 
-    private fun addWords(word:String,db:SQLiteDatabase){
+    private fun addWords(word:String,db:SQLiteDatabase){    //Lisätään sanoja uuteen SQLite databaseen, jotta se ei olisi tyhjä
         val values = ContentValues()
         values.put(COLUMN_ID, word)
         values.put(COLUMN_NUM, 0)
         db.insert(TABLE_WORDS, null, values)
     }
 
-    fun loadWords():ArrayList<String>{
+    fun loadWords():ArrayList<String>{              //Haetaan kaikki sanat databasesta string listaan
         var resword = arrayListOf<String>()
         val query="Select*FROM $TABLE_WORDS"
         val db = this.writableDatabase
@@ -40,7 +40,7 @@ class Database internal constructor(context: Context?):
         return resword
     }
 
-    fun loadNum():ArrayList<Int>{
+    fun loadNum():ArrayList<Int>{                   //Haetaan yritys kerrat sanoille int listaan
         var resnum = arrayListOf<Int>()
         val query="Select*FROM $TABLE_WORDS"
         val db = this.writableDatabase
@@ -53,7 +53,7 @@ class Database internal constructor(context: Context?):
         return resnum
     }
 
-    fun add(word: String):Long{
+    fun add(word: String):Long{                     //Lisätään käyttäjän antama sana databaseen
         val confirm : Long
         val values = ContentValues()
         values.put(COLUMN_ID, word)
@@ -64,7 +64,7 @@ class Database internal constructor(context: Context?):
         return confirm
     }
 
-    fun updateTry(word:String,num:Int){
+    fun updateTry(word:String,num:Int){             //päivitetään sanan yritys kertojen määrä voitossa
         val db=this.writableDatabase
         val args = ContentValues()
         args.put(COLUMN_NUM, num)
